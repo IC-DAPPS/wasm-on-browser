@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wasm Example</title>
+</head>
+<body>
+    <button id="runButton">Run Main Function</button>
+    <div id="result"></div>
+
+    <script type="module">
+        import init, { run_main } from './pkg/wasm_example.js';
+
+        async function initWasm() {
+            await init();
+            console.log("WebAssembly module initialized");
+        }
+
+        async function handleClick() {
+            console.log("Button clicked");
+            run_main();
+            // WebAssembly se message get karke display karna
+            document.getElementById('result').textContent = "Check console for output!";
+        }
+
+        initWasm();
+        document.getElementById('runButton').addEventListener('click', handleClick);
+    </script>
+</body>
+</html>
