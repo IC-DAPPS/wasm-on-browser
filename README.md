@@ -15,8 +15,8 @@ This project demonstrates how to run WebAssembly (Wasm) compiled from Rust in a 
 
 1. Clone this repository:
    ```
-   git clone <your-repository-url>
-   cd <your-project-directory>
+   git clone https://github.com/IC-DAPPS/wasm-on-browser.git
+   cd wasm-on-browser
    ```
 
 2. Run the setup and build script:
